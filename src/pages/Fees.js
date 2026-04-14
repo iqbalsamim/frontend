@@ -8,7 +8,7 @@ import logo from "../assets/logo.jpg";
 function Fees() {
   const [fees, setFees] = useState([]);
   const [students, setStudents] = useState([]);
-  const [classes, setClasses] = useState([]);
+  //const [classes, setClasses] = useState([]);
 
   const [studentSearch, setStudentSearch] = useState("");
   const [selectedStudent, setSelectedStudent] = useState(null);
@@ -91,7 +91,7 @@ function Fees() {
       });
 
       const feeId = res.data.id;
-      const invoiceNo = res.data.invoiceNo;
+     // const invoiceNo = res.data.invoiceNo;
 
       if (newFee.pay_amount && newFee.pay_amount > 0) {
         await API.post("/fees/pay", {

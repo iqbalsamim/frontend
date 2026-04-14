@@ -1,7 +1,7 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 function Timetable() {
-  const [timetable, setTimetable] = useState([]);
+  //const [timetable, setTimetable] = useState([]);
 
   return (
     <div>
