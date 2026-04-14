@@ -61,11 +61,12 @@ function Fees() {
       console.error("Error loading classes:", err);
     }
   };
-
+  
   useEffect(() => {
     loadFees();
     loadStudents();
     loadClasses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // PAYMENT HISTORY
