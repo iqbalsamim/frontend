@@ -134,8 +134,8 @@ function Marks() {
 
   // ================= FILTER =================
   const filteredMarks = marksList.filter((m) => {
-    const examMatch = !filterExam || m.exam_id == filterExam;
-    const classMatch = !filterClass || m.class_id == filterClass;
+    const examMatch = !filterExam || m.exam_id === filterExam;
+    const classMatch = !filterClass || m.class_id === filterClass;
     const searchMatch = !searchStudent || 
       m.student?.toLowerCase().includes(searchStudent.toLowerCase());
     
@@ -147,11 +147,11 @@ function Marks() {
     const doc = new jsPDF();
     const img = new Image();
     img.src = logo;
-    const student = students.find(s => s.id == studentId);
-    const exam = exams.find(e => e.id == examId);
+    const student = students.find(s => s.id === studentId);
+    const exam = exams.find(e => e.id === examId);
 
     const studentMarks = marksList.filter(
-      r => r.student_id == studentId && r.exam_id == examId
+      r => r.student_id === studentId && r.exam_id === examId
     );
 
     doc.setFontSize(18);
@@ -286,9 +286,9 @@ function Marks() {
       const img = new Image();
       img.src = logo;
   
-      const selectedClass = classes.find(c => c.id == filterClass);
+      const selectedClass = classes.find(c => c.id === filterClass);
       const className = selectedClass ? selectedClass.name : "";
-      const selectedExam = exams.find(e => e.id == filterExam);
+      const selectedExam = exams.find(e => e.id === filterExam);
       const examName = selectedExam ? selectedExam.name : "";
   
       doc.setFillColor(20, 41, 87);
