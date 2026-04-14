@@ -8,7 +8,7 @@ import logo from "../assets/logo.jpg";
 function Fees() {
   const [fees, setFees] = useState([]);
   const [students, setStudents] = useState([]);
-  //const [classes, setClasses] = useState([]);
+  const [setClasses] = useState([]);
 
   const [studentSearch, setStudentSearch] = useState("");
   const [selectedStudent, setSelectedStudent] = useState(null);
